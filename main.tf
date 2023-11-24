@@ -29,7 +29,7 @@ module "azurerm-secstorage2" {
   resource_group_name = azurerm_resource_group.rg.name
   storage_account_name = "porcodio12345"
 }
-
+ 
 resource "azurerm_resource_group" "rg" {
   name = "813-4551346f-hands-on-with-terraform-on-azure"
   location = "southcentralus"
