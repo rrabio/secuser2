@@ -24,28 +24,13 @@ provider "azurerm" {
 
 module "azurerm-secstorage2" {
   source  = "app.terraform.io/rrabionet/azurerm-secstorage2/terraform"
-  version = "1.0.0"
+  version = "1.0.1"
+  location = azurerm_resource_group.rg.location
+  resource_group_name = azurerm_resource_group.rg.name
+  storage_account_name = "porcodio12345"
 }
-
 
 resource "azurerm_resource_group" "rg" {
-  location = "eastus"
-  name     = "813-eca3f4f8-hands-on-with-terraform-on-azure"
-}
-
-
-variable "ARM_CLIENT_ID" {
-
-}
-
-variable "ARM_SUBSCRIPTION_ID" {
-
-}
-
-variable "ARM_CLIENT_SECRET" {
-
-}
-
-variable "ARM_TENANT_ID" {
-
+  name = "813-4551346f-hands-on-with-terraform-on-azure"
+  location = "southcentralus"
 }
